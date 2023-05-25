@@ -1,7 +1,20 @@
+import Icon from '@mdi/react';
+import { mdiCursorDefaultClickOutline } from '@mdi/js';
+
 const Header = () => {
     return (
         <header className='app-header'>
             <div className='app-name-logo'>
+                <Icon
+                    path={mdiCursorDefaultClickOutline}
+                    title='User Profile'
+                    size={3}
+                    // horizontal
+                    // vertical
+                    // rotate={90}
+                    // color='red'
+                    // spin
+                />
                 <h1>Wimmelbilder App</h1>
             </div>
             <div className='header-buttons'>
