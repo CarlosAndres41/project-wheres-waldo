@@ -44,13 +44,14 @@ function App() {
         <div className='App'>
             <Header />
             <SelectLevel>
-                {data.map((item) => (
+                {data.map((item, index) => (
                     <LevelCard
                         key={item.id}
                         name={item.name}
                         author={item.author}
                         source={item.source}
                         image={item.image}
+                        index={index}
                     />
                 ))}
             </SelectLevel>
