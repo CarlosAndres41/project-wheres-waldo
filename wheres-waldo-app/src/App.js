@@ -9,6 +9,7 @@ import { collection, getDocs } from 'firebase/firestore';
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 import Header from './components/Header';
+import SelectLevel from './components/SelectLevel';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -33,6 +34,7 @@ function App() {
     return (
         <div className='App'>
             <Header />
+            <SelectLevel />
         </div>
     );
 }
