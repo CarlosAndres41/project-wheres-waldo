@@ -45,7 +45,13 @@ function App() {
             <Header />
             <SelectLevel>
                 {data.map((item) => (
-                    <LevelCard key={item.id} />
+                    <LevelCard
+                        key={item.id}
+                        name={item.name}
+                        author={item.author}
+                        source={item.source}
+                        image={item.image}
+                    />
                 ))}
             </SelectLevel>
         </div>
