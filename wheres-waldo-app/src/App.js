@@ -8,6 +8,8 @@ import { collection, getDocs } from 'firebase/firestore';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
+import Header from './components/Header';
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
     apiKey: 'AIzaSyAcTl4E-lXekv1ioObOu0a5eTk4nL8hJdA',
@@ -26,11 +28,11 @@ const querySnapshot = await getDocs(collection(db, 'Images'));
 
 function App() {
     querySnapshot.forEach((doc) => {
-        console.log(`${doc.id} => ${doc.data()}`);
+        console.log(`${doc.id} => ${doc.data().Name}`);
     });
     return (
         <div className='App'>
-            <header className='App-header'></header>
+            <Header />
         </div>
     );
 }
