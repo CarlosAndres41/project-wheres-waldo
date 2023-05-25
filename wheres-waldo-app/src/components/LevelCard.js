@@ -1,5 +1,5 @@
 const LevelCard = (props) => {
-    const { name, author, source, image } = props;
+    const { name, author, source, image, index } = props;
     return (
         <div className='level-card'>
             <h1>Level Card</h1>
