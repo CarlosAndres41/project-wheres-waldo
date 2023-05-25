@@ -1,1 +1,21 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
 
+/* Header Start */
+.app-header {
+    padding: 1rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app-name-logo {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+/* Header End */
