@@ -21,6 +21,12 @@ body {
 /* Header End */
 
 /* Level Cards Start */
+.all-levels {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
 .level-card {
     width: 300px;
     border: 1px solid black;
