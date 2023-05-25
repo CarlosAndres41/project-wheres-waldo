@@ -6,7 +6,7 @@ const SelectLevel = ({ children }) => {
             <div className='level-select-title'>
                 <h2>Select Level</h2>
             </div>
-            {children}
+            <div className='all-levels'>{children}</div>
         </div>
     );
 };
