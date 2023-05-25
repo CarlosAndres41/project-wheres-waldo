@@ -7,7 +7,7 @@ const Header = () => {
             <div className='app-name-logo'>
                 <Icon
                     path={mdiCursorDefaultClickOutline}
-                    title='User Profile'
+                    title='App Logo'
                     size={3}
                     // horizontal
                     // vertical
