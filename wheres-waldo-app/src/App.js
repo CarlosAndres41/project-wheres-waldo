@@ -40,13 +40,12 @@ querySnapshot.forEach((doc) => {
 });
 
 function App() {
-    console.log(data);
     return (
         <div className='App'>
             <Header />
             <SelectLevel>
-                {querySnapshot.forEach((doc) => (
-                    <LevelCard />
+                {data.map((item) => (
+                    <LevelCard key={item.id} />
                 ))}
             </SelectLevel>
         </div>
