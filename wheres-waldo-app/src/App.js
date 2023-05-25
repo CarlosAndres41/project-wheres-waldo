@@ -10,6 +10,7 @@ import { collection, getDocs } from 'firebase/firestore';
 
 import Header from './components/Header';
 import SelectLevel from './components/SelectLevel';
+import LevelCard from './components/LevelCard';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -27,14 +28,27 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const querySnapshot = await getDocs(collection(db, 'Images'));
 
-function App() {
-    querySnapshot.forEach((doc) => {
-        console.log(`${doc.id} => ${doc.data().Name}`);
+const data = [];
+querySnapshot.forEach((doc) => {
+    data.push({
+        id: doc.id,
+        name: doc.data().Name,
+        author: doc.data().Author,
+        source: doc.data().Source,
+        image: doc.data().imageURL,
     });
+});
+
+function App() {
+    console.log(data);
     return (
         <div className='App'>
             <Header />
-            <SelectLevel />
+            <SelectLevel>
+                {querySnapshot.forEach((doc) => (
+                    <LevelCard />
+                ))}
+            </SelectLevel>
         </div>
     );
 }
