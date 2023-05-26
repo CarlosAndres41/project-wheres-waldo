@@ -11,6 +11,7 @@ import { collection, getDocs } from 'firebase/firestore';
 import Header from './components/Header';
 import SelectLevel from './components/SelectLevel';
 import LevelCard from './components/LevelCard';
+import { useState } from 'react';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -41,22 +42,25 @@ querySnapshot.forEach((doc) => {
 });
 
 function App() {
+    const [gameStart, setGameStart] = useState(false);
     return (
         <div className='App'>
             <Header />
-            <SelectLevel>
-                {data.map((item, index) => (
-                    <LevelCard
-                        key={item.id}
-                        name={item.name}
-                        author={item.author}
-                        source={item.source}
-                        image={item.image}
-                        characters={item.characters}
-                        index={index}
-                    />
-                ))}
-            </SelectLevel>
+            {!gameStart && (
+                <SelectLevel>
+                    {data.map((item, index) => (
+                        <LevelCard
+                            key={item.id}
+                            name={item.name}
+                            author={item.author}
+                            source={item.source}
+                            image={item.image}
+                            characters={item.characters}
+                            index={index}
+                        />
+                    ))}
+                </SelectLevel>
+            )}
         </div>
     );
 }
