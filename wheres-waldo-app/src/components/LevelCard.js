@@ -30,6 +30,9 @@ const LevelCard = (props) => {
                     </a>
                 </p>
             </div>
+            <div className='card-btn'>
+                <button>Play</button>
+            </div>
         </div>
     );
 };
