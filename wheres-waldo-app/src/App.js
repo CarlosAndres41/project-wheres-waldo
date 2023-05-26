@@ -36,6 +36,7 @@ querySnapshot.forEach((doc) => {
         author: doc.data().Author,
         source: doc.data().Source,
         image: doc.data().imageURL,
+        characters: doc.data().Characters,
     });
 });
 
@@ -51,6 +52,7 @@ function App() {
                         author={item.author}
                         source={item.source}
                         image={item.image}
+                        characters={item.characters}
                         index={index}
                     />
                 ))}
