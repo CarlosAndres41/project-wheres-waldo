@@ -44,4 +44,9 @@ body {
     height: 400px;
     border-radius: 4px;
 }
+
+.character-img {
+    height: 50px;
+    width: 50px;
+}
 /* level Cards End */
