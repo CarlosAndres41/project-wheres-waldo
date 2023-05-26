@@ -1,5 +1,5 @@
 const LevelCard = (props) => {
-    const { name, author, source, image, index } = props;
+    const { name, author, source, image, characters, index } = props;
     return (
         <div className='level-card'>
             <div className='card-header'>
@@ -11,7 +11,15 @@ const LevelCard = (props) => {
             <div>
                 <img src={image} alt={name} className='card-img'></img>
             </div>
-            <div className='card-chars'></div>
+            <div className='card-chars'>
+                {characters.map((char) => (
+                    <img
+                        src={char}
+                        alt='character'
+                        className='character-img'
+                    ></img>
+                ))}
+            </div>
             <div className='card-footer'>
                 <p>
                     <span>Author:</span> {author}
