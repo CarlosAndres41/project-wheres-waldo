@@ -11,6 +11,8 @@ import { collection, getDocs } from 'firebase/firestore';
 import Header from './components/Header';
 import SelectLevel from './components/SelectLevel';
 import LevelCard from './components/LevelCard';
+import Game from './components/Game';
+
 import { useState } from 'react';
 
 // Your web app's Firebase configuration
@@ -61,6 +63,7 @@ function App() {
                     ))}
                 </SelectLevel>
             )}
+            {gameStart && <Game />}
         </div>
     );
 }
