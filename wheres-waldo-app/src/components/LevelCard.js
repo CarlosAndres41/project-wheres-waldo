@@ -3,7 +3,7 @@ const LevelCard = (props) => {
     return (
         <div className='level-card'>
             <div className='card-header'>
-                <h3>Level {index + 1}</h3>
+                <h2>Level {index + 1}</h2>
             </div>
             <div className='card-name'>
                 <h4>{name}</h4>
