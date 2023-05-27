@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+import DropdownContent from './Dropdown-content';
 
 const Game = (props) => {
     const returnToSelect = props.returnToSelect;
     const level = props.level;
     const data = props.data;
+
+    const [openDropdown, setOpenDropdown] = useState(false);
 
     return (
         <div className='main-game'>
@@ -19,6 +23,7 @@ const Game = (props) => {
                     className='game-image'
                 />
             </div>
+            {openDropdown && <DropdownContent />}
             <button onClick={returnToSelect}>Return to Select Level</button>
         </div>
     );
