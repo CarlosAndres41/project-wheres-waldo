@@ -7,7 +7,7 @@ const DropdownContent = (props) => {
                     <span>{props.names[index]}</span>
                     <img
                         src={image}
-                        alt='item image'
+                        alt={props.names[index]}
                         className='dropdown-img'
                     />
                 </div>
