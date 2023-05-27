@@ -8,6 +8,9 @@ const Game = (props) => {
     const data = props.data;
 
     const [openDropdown, setOpenDropdown] = useState(false);
+    const toggleDropdown = () => {
+        setOpenDropdown(!openDropdown);
+    };
 
     return (
         <div className='main-game'>
