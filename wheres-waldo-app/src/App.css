@@ -116,6 +116,13 @@
 }
 /* Game End */
 
+/* Dropdown content Start */
+.dropdown-content {
+    background-color: white;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+}
+/* Dropdown content End */
+
 /* Buttons Start */
 .btn {
     font-family: inherit;
