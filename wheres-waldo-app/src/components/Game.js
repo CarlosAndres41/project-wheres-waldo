@@ -8,6 +8,11 @@ const Game = (props) => {
     const data = props.data;
 
     const [openDropdown, setOpenDropdown] = useState(false);
+    const [dropddownPosition, setDropdownPosition] = useState({
+        x: 0,
+        y: 0,
+    });
+
     const toggleDropdown = () => {
         setOpenDropdown(!openDropdown);
     };
