@@ -33,6 +33,7 @@ const Game = (props) => {
                     src={data[level - 1].image}
                     alt={data[level - 1].name}
                     className='game-image'
+                    onClick={toggleDropdown}
                 />
             </div>
             {openDropdown && <DropdownContent />}
