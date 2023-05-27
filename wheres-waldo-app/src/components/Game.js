@@ -21,6 +21,13 @@ const Game = (props) => {
         });
     };
 
+    const dropdownStyle = {
+        left: dropddownPosition.x,
+        top: dropddownPosition.y,
+        position: 'fixed',
+        display: openDropdown ? 'block' : 'none',
+    };
+
     return (
         <div className='main-game'>
             <div className='game-header'>
