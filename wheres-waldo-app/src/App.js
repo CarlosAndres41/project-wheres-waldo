@@ -40,6 +40,7 @@ querySnapshot.forEach((doc) => {
         source: doc.data().Source,
         image: doc.data().imageURL,
         characters: doc.data().Characters,
+        characterNames: doc.data().CharacterNames,
     });
 });
 
