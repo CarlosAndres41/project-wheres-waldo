@@ -31,7 +31,7 @@ const LevelCard = (props) => {
                 </p>
             </div>
             <div className='card-btn'>
-                <button onClick={() => startGame()}>Play</button>
+                <button onClick={() => startGame(index)}>Play</button>
             </div>
         </div>
     );
