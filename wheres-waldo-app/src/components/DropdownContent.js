@@ -5,7 +5,11 @@ const DropdownContent = (props) => {
             {images.map((image, index) => (
                 <div className='dropdown-item'>
                     <span>{props.names[index]}</span>
-                    <img src={image} alt='image' className='dropdown-img' />
+                    <img
+                        src={image}
+                        alt='item image'
+                        className='dropdown-img'
+                    />
                 </div>
             ))}
         </div>
