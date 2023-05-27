@@ -13,8 +13,12 @@ const Game = (props) => {
         y: 0,
     });
 
-    const toggleDropdown = () => {
+    const toggleDropdown = (e) => {
         setOpenDropdown(!openDropdown);
+        setDropdownPosition({
+            x: e.clientX,
+            y: e.clientY,
+        });
     };
 
     return (
