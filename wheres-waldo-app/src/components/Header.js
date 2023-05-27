@@ -18,7 +18,7 @@ const Header = () => {
                 <h1>Wimmelbilder App</h1>
             </div>
             <div className='header-buttons'>
-                <button className='btn btn-primary'>Leaaderboard</button>
+                <button className='btn btn-primary'>Leaderboard</button>
             </div>
         </header>
     );
