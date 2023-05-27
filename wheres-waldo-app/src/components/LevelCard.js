@@ -34,7 +34,12 @@ const LevelCard = (props) => {
                 </p>
             </div>
             <div className='card-btn'>
-                <button onClick={() => startGame(index)}>Play</button>
+                <button
+                    onClick={() => startGame(index)}
+                    className='btn btn-secondary'
+                >
+                    Play
+                </button>
             </div>
         </div>
     );
