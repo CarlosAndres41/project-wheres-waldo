@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import DropdownContent from './Dropdown-content';
+import DropdownContent from './DropdownContent';
 
 const Game = (props) => {
     const returnToSelect = props.returnToSelect;
