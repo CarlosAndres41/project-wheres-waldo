@@ -50,3 +50,10 @@ body {
     width: 50px;
 }
 /* level Cards End */
+
+/* Game Start */
+.game-image {
+    max-width: 90%;
+    height: auto;
+}
+/* Game End */
