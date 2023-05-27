@@ -13,7 +13,11 @@ const Game = (props) => {
                 </h1>
             </div>
             <div className='game-board'>
-                <img src={data[level - 1].image} alt={data[level - 1].name} />
+                <img
+                    src={data[level - 1].image}
+                    alt={data[level - 1].name}
+                    className='game-image'
+                />
             </div>
             <button onClick={returnToSelect}>Return to Select Level</button>
         </div>
