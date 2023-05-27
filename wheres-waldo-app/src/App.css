@@ -57,3 +57,25 @@ body {
     height: auto;
 }
 /* Game End */
+
+/* Buttons Start */
+.btn {
+    font-family: inherit;
+}
+
+.btn-primary {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    border: 2px solid black;
+    color: white;
+    border-radius: 5px;
+    background-color: black;
+
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    color: black;
+    background-color: white;
+}
+/* Buttons End */
