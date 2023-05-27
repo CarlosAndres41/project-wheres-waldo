@@ -1,5 +1,5 @@
 const LevelCard = (props) => {
-    const { name, author, source, image, characters, index } = props;
+    const { name, author, source, image, characters, index, startGame } = props;
     return (
         <div className='level-card'>
             <div className='card-header'>
@@ -31,7 +31,7 @@ const LevelCard = (props) => {
                 </p>
             </div>
             <div className='card-btn'>
-                <button>Play</button>
+                <button onClick={() => startGame()}>Play</button>
             </div>
         </div>
     );
