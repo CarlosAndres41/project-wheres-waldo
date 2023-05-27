@@ -45,9 +45,11 @@ querySnapshot.forEach((doc) => {
 
 function App() {
     const [gameStart, setGameStart] = useState(false);
+    const [level, setLevel] = useState(0);
 
-    const startGame = () => {
+    const startGame = (index) => {
         setGameStart(true);
+        setLevel(index + 1);
     };
 
     const returnToSelect = () => {
