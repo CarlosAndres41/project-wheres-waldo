@@ -50,6 +50,10 @@ function App() {
         setGameStart(true);
     };
 
+    const returnToSelect = () => {
+        setGameStart(false);
+    };
+
     return (
         <div className='App'>
             <Header />
@@ -69,7 +73,7 @@ function App() {
                     ))}
                 </SelectLevel>
             )}
-            {gameStart && <Game />}
+            {gameStart && <Game returnToSelect={returnToSelect} />}
         </div>
     );
 }
