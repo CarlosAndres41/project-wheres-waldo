@@ -43,7 +43,13 @@ const Game = (props) => {
                     onClick={toggleDropdown}
                 />
             </div>
-            {openDropdown && <DropdownContent style={dropdownStyle} />}
+            {openDropdown && (
+                <DropdownContent
+                    style={dropdownStyle}
+                    images={data[level - 1].characters}
+                    names={data[level - 1].characterNames}
+                />
+            )}
             <div className='game-btn-container'>
                 <button onClick={returnToSelect} className='btn btn-secondary'>
                     Return to Select Level
