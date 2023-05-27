@@ -76,7 +76,11 @@ function App() {
                 </SelectLevel>
             )}
             {gameStart && (
-                <Game returnToSelect={returnToSelect} level={level} />
+                <Game
+                    returnToSelect={returnToSelect}
+                    level={level}
+                    data={data}
+                />
             )}
         </div>
     );
