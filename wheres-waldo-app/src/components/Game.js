@@ -36,7 +36,11 @@ const Game = (props) => {
                     onClick={toggleDropdown}
                 />
             </div>
-            {openDropdown && <DropdownContent />}
+            {openDropdown && (
+                <DropdownContent
+                    className={openDropdown ? 'dropdown-open' : ''}
+                />
+            )}
             <button onClick={returnToSelect}>Return to Select Level</button>
         </div>
     );
