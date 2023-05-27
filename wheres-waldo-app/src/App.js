@@ -45,6 +45,11 @@ querySnapshot.forEach((doc) => {
 
 function App() {
     const [gameStart, setGameStart] = useState(false);
+
+    const startGame = () => {
+        setGameStart(true);
+    };
+
     return (
         <div className='App'>
             <Header />
@@ -59,6 +64,7 @@ function App() {
                             image={item.image}
                             characters={item.characters}
                             index={index}
+                            startGame={startGame}
                         />
                     ))}
                 </SelectLevel>
