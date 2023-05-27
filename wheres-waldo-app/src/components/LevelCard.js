@@ -5,21 +5,24 @@ const LevelCard = (props) => {
             <div className='card-header'>
                 <h2>Level {index + 1}</h2>
             </div>
-            <div className='card-name'>
-                <h4>{name}</h4>
+            <div className='card-description'>
+                <div className='card-name'>
+                    <h4>{name}</h4>
+                </div>
+                <div className='card-chars'>
+                    {characters.map((char) => (
+                        <img
+                            src={char}
+                            alt='character'
+                            className='character-img'
+                        ></img>
+                    ))}
+                </div>
             </div>
             <div>
                 <img src={image} alt={name} className='card-img'></img>
             </div>
-            <div className='card-chars'>
-                {characters.map((char) => (
-                    <img
-                        src={char}
-                        alt='character'
-                        className='character-img'
-                    ></img>
-                ))}
-            </div>
+
             <div className='card-footer'>
                 <p>
                     <span>Author:</span> {author}
