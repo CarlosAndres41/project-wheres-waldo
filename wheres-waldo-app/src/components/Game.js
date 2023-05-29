@@ -30,6 +30,13 @@ const Game = (props) => {
         const offsetY = e.clientY - imageRect.top;
         setFixedCoordinates({ x: offsetX, y: offsetY });
     };
+
+    // Set the original image size when it is loaded or when its size changes
+    const handleImageLoad = (e) => {
+        const { naturalWidth, naturalHeight } = e.target;
+        setOriginalImageSize({ width: naturalWidth, height: naturalHeight });
+    };
+
     const dropdownStyle = {
         left: dropddownPosition.x,
         top: dropddownPosition.y,
