@@ -3,7 +3,7 @@ const DropdownContent = (props) => {
     return (
         <div className='dropdown-content' style={props.style}>
             {images.map((image, index) => (
-                <div className='dropdown-item'>
+                <div className='dropdown-item' key={index}>
                     <span>{props.names[index]}</span>
                     <img
                         src={image}
