@@ -53,7 +53,7 @@ const Game = (props) => {
                     style={dropdownStyle}
                     images={data[level - 1].characters}
                     names={data[level - 1].characterNames}
-                    clickCoordinates={dropddownPosition}
+                    clickCoordinates={fixedCoordinates}
                     coordinates={data[level - 1].coordinates}
                 />
             )}
