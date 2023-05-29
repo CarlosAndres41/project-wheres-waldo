@@ -10,8 +10,9 @@ const LevelCard = (props) => {
                     <h4>{name}</h4>
                 </div>
                 <div className='card-chars'>
-                    {characters.map((char) => (
+                    {characters.map((char, index) => (
                         <img
+                            key={index}
                             src={char}
                             alt='character'
                             className='character-img'
