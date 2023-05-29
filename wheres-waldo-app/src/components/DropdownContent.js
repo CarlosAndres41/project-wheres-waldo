@@ -6,12 +6,21 @@ const DropdownContent = (props) => {
     );
 
     const handleClick = (index) => {
-        console.log(
-            clickCoordinates.x,
-            clickCoordinates.y,
-            coordinates[index].x,
-            coordinates[index].y
+        const radius = 50;
+        const centerPoint = coordinates[index];
+        const clickX = clickCoordinates.x;
+        const clickY = clickCoordinates.y;
+
+        const distance = Math.sqrt(
+            Math.pow(clickX - centerPoint.x, 2) +
+                Math.pow(clickY - centerPoint.y, 2)
         );
+
+        if (distance <= radius) {
+            console.log('Whithin radius');
+        } else {
+            console.log('Outside radius');
+        }
     };
 
     return (
