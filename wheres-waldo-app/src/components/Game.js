@@ -26,8 +26,12 @@ const Game = (props) => {
         });
 
         const imageRect = e.target.getBoundingClientRect();
-        const offsetX = e.clientX - imageRect.left;
-        const offsetY = e.clientY - imageRect.top;
+        const offsetX =
+            (e.clientX - imageRect.left) *
+            (originalImageSize.width / imageRect.width);
+        const offsetY =
+            (e.clientY - imageRect.top) *
+            (originalImageSize.height / imageRect.height);
         setFixedCoordinates({ x: offsetX, y: offsetY });
     };
 
