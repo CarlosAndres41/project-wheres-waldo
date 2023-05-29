@@ -12,6 +12,7 @@ const Game = (props) => {
         x: 0,
         y: 0,
     });
+    const [fixedCoordinates, setFixedCoordinates] = useState({ x: 0, y: 0 });
 
     const toggleDropdown = (e) => {
         setOpenDropdown(!openDropdown);
@@ -19,9 +20,12 @@ const Game = (props) => {
             x: e.clientX,
             y: e.clientY,
         });
-        console.log(data);
-    };
 
+        const imageRect = e.target.getBoundingClientRect();
+        const offsetX = e.clientX - imageRect.left;
+        const offsetY = e.clientY - imageRect.top;
+        setFixedCoordinates({ x: offsetX, y: offsetY });
+    };
     const dropdownStyle = {
         left: dropddownPosition.x,
         top: dropddownPosition.y,
