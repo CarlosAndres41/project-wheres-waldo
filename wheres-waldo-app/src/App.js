@@ -41,6 +41,7 @@ querySnapshot.forEach((doc) => {
         image: doc.data().imageURL,
         characters: doc.data().Characters,
         characterNames: doc.data().CharacterNames,
+        coordinates: doc.data().Coordinates,
     });
 });
 
