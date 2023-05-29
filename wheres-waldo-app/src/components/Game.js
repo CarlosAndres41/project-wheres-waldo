@@ -19,6 +19,7 @@ const Game = (props) => {
             x: e.clientX,
             y: e.clientY,
         });
+        console.log(data);
     };
 
     const dropdownStyle = {
@@ -48,6 +49,8 @@ const Game = (props) => {
                     style={dropdownStyle}
                     images={data[level - 1].characters}
                     names={data[level - 1].characterNames}
+                    clickCoordinates={dropddownPosition}
+                    coordinates={data[level - 1].coordinates}
                 />
             )}
             <div className='game-btn-container'>
