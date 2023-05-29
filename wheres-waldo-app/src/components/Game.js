@@ -13,6 +13,10 @@ const Game = (props) => {
         y: 0,
     });
     const [fixedCoordinates, setFixedCoordinates] = useState({ x: 0, y: 0 });
+    const [originalImageSize, setOriginalImageSize] = useState({
+        width: 0,
+        height: 0,
+    });
 
     const toggleDropdown = (e) => {
         setOpenDropdown(!openDropdown);
