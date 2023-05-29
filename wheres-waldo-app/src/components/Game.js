@@ -57,6 +57,7 @@ const Game = (props) => {
                     alt={data[level - 1].name}
                     className='game-image'
                     onClick={toggleDropdown}
+                    onLoad={handleImageLoad}
                 />
             </div>
             {openDropdown && (
