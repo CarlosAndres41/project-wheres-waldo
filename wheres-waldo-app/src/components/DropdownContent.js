@@ -9,6 +9,13 @@ const DropdownContent = (props) => {
 
     const [isShaking, setIsShaking] = useState;
 
+    const handleShake = () => {
+        setIsShaking(true);
+        setTimeout(() => {
+            setIsShaking(false);
+        }, 400);
+    };
+
     const handleClick = (index) => {
         const radius = 50;
         const centerPoint = coordinates[index];
