@@ -46,6 +46,9 @@ const DropdownContent = (props) => {
             setFound((found) =>
                 found.map((item, i) => (i === index ? true : item))
             );
+            setTimeout(() => {
+                props.setOpenDropdown(!props.openDropdown);
+            }, 1000);
         } else {
             handleShake();
         }
