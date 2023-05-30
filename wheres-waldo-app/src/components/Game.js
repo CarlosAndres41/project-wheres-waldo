@@ -79,6 +79,7 @@ const Game = (props) => {
                     <h1>
                         Level {level} - {data[level - 1].name}
                     </h1>
+                    <h2>{formatTime(timer)}</h2>
                 </div>
                 <div className='game-board'>
                     <img
