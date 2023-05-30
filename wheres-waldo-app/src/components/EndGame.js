@@ -1,6 +1,6 @@
 const EndGame = (props) => {
     return (
-        <div className='end-game'>
+        <div className={props.foundAll ? 'end-game show' : 'end-game'}>
             <div className='message'>
                 <h1>Congratulations, you have won the game</h1>
             </div>
