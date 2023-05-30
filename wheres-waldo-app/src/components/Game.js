@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import DropdownContent from './DropdownContent';
+import EndGame from './EndGame';
 
 const Game = (props) => {
     const returnToSelect = props.returnToSelect;
@@ -88,6 +89,7 @@ const Game = (props) => {
                     Return to Select Level
                 </button>
             </div>
+            {foundAll && <EndGame />}
         </div>
     );
 };
