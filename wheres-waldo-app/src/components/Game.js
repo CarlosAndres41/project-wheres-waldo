@@ -130,6 +130,7 @@ const Game = (props) => {
                     foundAll={foundAll}
                     setFound={setFound}
                     setFoundAll={setFoundAll}
+                    finalTime={formatTime(timer)}
                 />
             )}
         </>
