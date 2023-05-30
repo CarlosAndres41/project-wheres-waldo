@@ -7,7 +7,7 @@ const DropdownContent = (props) => {
         JSON.parse(str.replace(/([{,]\s*)([a-zA-Z0-9_]+)\s*:/g, '$1"$2":'))
     );
 
-    const [isShaking, setIsShaking] = useState;
+    const [isShaking, setIsShaking] = useState(false);
 
     const handleShake = () => {
         setIsShaking(true);
@@ -30,15 +30,18 @@ const DropdownContent = (props) => {
         if (distance <= radius) {
             console.log('Whithin radius');
         } else {
-            console.log('Outside radius');
+            handleShake();
         }
     };
 
     return (
-        <div className='dropdown-content' style={props.style}>
+        <div
+            className={isShaking ? 'shake' : 'dropdown-content'}
+            style={props.style}
+        >
             {images.map((image, index) => (
                 <div
-                    className={isShaking ? 'shake' : 'dropdown-item'}
+                    className='dropdown-item'
                     key={index}
                     onClick={() => handleClick(index)}
                 >
