@@ -90,7 +90,11 @@ const Game = (props) => {
                 </button>
             </div>
             {foundAll && (
-                <EndGame returnToSelect={returnToSelect} foundAll={foundAll} />
+                <EndGame
+                    returnToSelect={returnToSelect}
+                    foundAll={foundAll}
+                    setFound={setFound}
+                />
             )}
         </div>
     );
