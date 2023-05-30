@@ -1,7 +1,13 @@
 const EndGame = () => {
     return (
         <div className='end-game'>
-            <h1>Congratulations, you have won the game</h1>
+            <div className='message'>
+                <h1>Congratulations, you have won the game</h1>
+            </div>
+            <div className='end-game-btns'>
+                <button className='btn btn-secondary'>Play Again</button>
+                <button className='btn btn-secondary'>Select Level</button>
+            </div>
         </div>
     );
 };
