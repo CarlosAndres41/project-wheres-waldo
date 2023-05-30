@@ -25,6 +25,7 @@ const Game = (props) => {
 
     // Timer
     const [timer, setTimer] = useState(0);
+    const [isRunning, setIsRunning] = useState(true);
 
     const toggleDropdown = (e) => {
         setOpenDropdown(!openDropdown);
@@ -58,9 +59,13 @@ const Game = (props) => {
 
     // useEffect for timer
     useEffect(() => {
-        const interval = setInterval(() => {
-            setTimer((timer) => timer + 1);
-        }, 1000);
+        let interval;
+
+        if (isRunning) {
+            interval = setInterval(() => {
+                setTimer((prevTimer) => prevTimer + 1);
+            }, 1000);
+        }
         return () => clearInterval(interval);
     }, []);
 
