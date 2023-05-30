@@ -1,9 +1,13 @@
+import { useState } from 'react';
+
 const DropdownContent = (props) => {
     const images = props.images;
     const clickCoordinates = props.clickCoordinates;
     const coordinates = props.coordinates.map((str) =>
         JSON.parse(str.replace(/([{,]\s*)([a-zA-Z0-9_]+)\s*:/g, '$1"$2":'))
     );
+
+    const [isShaking, setIsShaking] = useState;
 
     const handleClick = (index) => {
         const radius = 50;
