@@ -1,4 +1,4 @@
-const EndGame = () => {
+const EndGame = (props) => {
     return (
         <div className='end-game'>
             <div className='message'>
@@ -6,7 +6,12 @@ const EndGame = () => {
             </div>
             <div className='end-game-btns'>
                 <button className='btn btn-secondary'>Play Again</button>
-                <button className='btn btn-secondary'>Select Level</button>
+                <button
+                    className='btn btn-secondary'
+                    onClick={props.returnToSelect}
+                >
+                    Select Level
+                </button>
             </div>
         </div>
     );
