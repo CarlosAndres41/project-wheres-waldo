@@ -33,11 +33,11 @@ const DropdownContent = (props) => {
         );
 
         if (distance <= radius) {
-            const foundCopy = [...found];
-            foundCopy[index] = true;
-            setFound(foundCopy);
+            setFound((found) =>
+                found.map((item, i) => (i === index ? true : item))
+            );
 
-            if (foundCopy.every((bool) => bool === true)) {
+            if (found.every((bool) => bool === true)) {
                 setFoundAll(true);
             }
         } else {
