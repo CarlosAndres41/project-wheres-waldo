@@ -9,6 +9,10 @@ const DropdownContent = (props) => {
 
     const [isShaking, setIsShaking] = useState(false);
 
+    // Game states
+    const [found, setFound] = useState([false, false, false]);
+    const [foundAll, setFoundAll] = useState(false);
+
     const handleShake = () => {
         setIsShaking(true);
         setTimeout(() => {
