@@ -69,6 +69,11 @@ const Game = (props) => {
         return () => clearInterval(interval);
     }, []);
 
+    // Use effect for foundAll
+    useEffect(() => {
+        setIsRunning(false);
+    }, [foundAll]);
+
     const formatTime = (time) => {
         const minutes = Math.floor(time / 60)
             .toString()
