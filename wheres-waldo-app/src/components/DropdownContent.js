@@ -7,14 +7,16 @@ const DropdownContent = (props) => {
         JSON.parse(str.replace(/([{,]\s*)([a-zA-Z0-9_]+)\s*:/g, '$1"$2":'))
     );
 
+    const found = props.found;
+    const setFound = props.setFound;
+    const setFoundAll = props.setFoundAll;
+
     const [isShaking, setIsShaking] = useState(false);
 
-    // Game states
-    const [found, setFound] = useState([false, false, false]);
-    const [foundAll, setFoundAll] = useState(false);
-
     useEffect(() => {
-        console.log(found);
+        if (found.every((item) => item === true)) {
+            setFoundAll(true);
+        }
     }, [found]);
 
     const handleShake = () => {
@@ -40,10 +42,6 @@ const DropdownContent = (props) => {
             setFound((found) =>
                 found.map((item, i) => (i === index ? true : item))
             );
-
-            if (found.every((bool) => bool === true)) {
-                setFoundAll(true);
-            }
         } else {
             handleShake();
         }
