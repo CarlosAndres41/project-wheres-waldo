@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react';
 
+import Icon from '@mdi/react';
+import { mdiCheckCircleOutline } from '@mdi/js';
+
 const DropdownContent = (props) => {
     const images = props.images;
     const clickCoordinates = props.clickCoordinates;
@@ -65,6 +68,13 @@ const DropdownContent = (props) => {
                         alt={props.names[index]}
                         className='dropdown-img'
                     />
+                    {found[index] && (
+                        <Icon
+                            path={mdiCheckCircleOutline}
+                            size={1}
+                            color='green'
+                        />
+                    )}
                 </div>
             ))}
         </div>
