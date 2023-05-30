@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const DropdownContent = (props) => {
     const images = props.images;
@@ -12,6 +12,10 @@ const DropdownContent = (props) => {
     // Game states
     const [found, setFound] = useState([false, false, false]);
     const [foundAll, setFoundAll] = useState(false);
+
+    useEffect(() => {
+        console.log(found);
+    }, [found]);
 
     const handleShake = () => {
         setIsShaking(true);
