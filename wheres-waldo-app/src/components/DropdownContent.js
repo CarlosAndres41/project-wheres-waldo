@@ -36,6 +36,10 @@ const DropdownContent = (props) => {
             const foundCopy = [...found];
             foundCopy[index] = true;
             setFound(foundCopy);
+
+            if (foundCopy.every((bool) => bool === true)) {
+                setFoundAll(true);
+            }
         } else {
             handleShake();
         }
