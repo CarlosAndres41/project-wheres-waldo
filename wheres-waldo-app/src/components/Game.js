@@ -54,40 +54,45 @@ const Game = (props) => {
     };
 
     return (
-        <div className={foundAll ? ' main-game hidden' : 'main-game'}>
-            <div className='game-header'>
-                <h1>
-                    Level {level} - {data[level - 1].name}
-                </h1>
-            </div>
-            <div className='game-board'>
-                <img
-                    src={data[level - 1].image}
-                    alt={data[level - 1].name}
-                    className='game-image'
-                    onClick={toggleDropdown}
-                    onLoad={handleImageLoad}
-                />
-            </div>
-            {openDropdown && (
-                <DropdownContent
-                    style={dropdownStyle}
-                    images={data[level - 1].characters}
-                    names={data[level - 1].characterNames}
-                    clickCoordinates={fixedCoordinates}
-                    coordinates={data[level - 1].coordinates}
-                    openDropdown={openDropdown}
-                    setOpenDropdown={setOpenDropdown}
-                    found={found}
-                    setFound={setFound}
-                    foundAll={foundAll}
-                    setFoundAll={setFoundAll}
-                />
-            )}
-            <div className='game-btn-container'>
-                <button onClick={returnToSelect} className='btn btn-secondary'>
-                    Return to Select Level
-                </button>
+        <>
+            <div className={foundAll ? ' main-game hidden' : 'main-game'}>
+                <div className='game-header'>
+                    <h1>
+                        Level {level} - {data[level - 1].name}
+                    </h1>
+                </div>
+                <div className='game-board'>
+                    <img
+                        src={data[level - 1].image}
+                        alt={data[level - 1].name}
+                        className='game-image'
+                        onClick={toggleDropdown}
+                        onLoad={handleImageLoad}
+                    />
+                </div>
+                {openDropdown && (
+                    <DropdownContent
+                        style={dropdownStyle}
+                        images={data[level - 1].characters}
+                        names={data[level - 1].characterNames}
+                        clickCoordinates={fixedCoordinates}
+                        coordinates={data[level - 1].coordinates}
+                        openDropdown={openDropdown}
+                        setOpenDropdown={setOpenDropdown}
+                        found={found}
+                        setFound={setFound}
+                        foundAll={foundAll}
+                        setFoundAll={setFoundAll}
+                    />
+                )}
+                <div className='game-btn-container'>
+                    <button
+                        onClick={returnToSelect}
+                        className='btn btn-secondary'
+                    >
+                        Return to Select Level
+                    </button>
+                </div>
             </div>
             {foundAll && (
                 <EndGame
@@ -97,7 +102,7 @@ const Game = (props) => {
                     setFoundAll={setFoundAll}
                 />
             )}
-        </div>
+        </>
     );
 };
 
