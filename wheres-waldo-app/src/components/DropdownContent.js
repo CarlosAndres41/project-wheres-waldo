@@ -38,7 +38,7 @@ const DropdownContent = (props) => {
         <div className='dropdown-content' style={props.style}>
             {images.map((image, index) => (
                 <div
-                    className='dropdown-item'
+                    className={isShaking ? 'shake' : 'dropdown-item'}
                     key={index}
                     onClick={() => handleClick(index)}
                 >
