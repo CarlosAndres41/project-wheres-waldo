@@ -94,6 +94,7 @@ const Game = (props) => {
                     returnToSelect={returnToSelect}
                     foundAll={foundAll}
                     setFound={setFound}
+                    setFoundAll={setFoundAll}
                 />
             )}
         </div>
