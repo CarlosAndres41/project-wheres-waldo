@@ -67,7 +67,7 @@ const Game = (props) => {
             }, 1000);
         }
         return () => clearInterval(interval);
-    }, []);
+    }, [isRunning]);
 
     // Use effect for foundAll
     useEffect(() => {
