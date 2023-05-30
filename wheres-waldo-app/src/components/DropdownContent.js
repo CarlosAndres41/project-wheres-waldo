@@ -13,6 +13,7 @@ const DropdownContent = (props) => {
         setIsShaking(true);
         setTimeout(() => {
             setIsShaking(false);
+            props.setOpenDropdown(!props.openDropdown);
         }, 400);
     };
 
