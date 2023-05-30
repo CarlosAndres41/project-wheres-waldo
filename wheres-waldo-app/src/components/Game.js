@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import DropdownContent from './DropdownContent';
 import EndGame from './EndGame';
@@ -22,6 +22,9 @@ const Game = (props) => {
     // Game states
     const [found, setFound] = useState([false, false, false]);
     const [foundAll, setFoundAll] = useState(false);
+
+    // Timer
+    const [timer, setTimer] = useState(0);
 
     const toggleDropdown = (e) => {
         setOpenDropdown(!openDropdown);
@@ -52,6 +55,14 @@ const Game = (props) => {
         position: 'fixed',
         display: openDropdown ? 'block' : 'none',
     };
+
+    // useEffect for timer
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setTimer((timer) => timer + 1);
+        }, 1000);
+        return () => clearInterval(interval);
+    }, []);
 
     return (
         <>
