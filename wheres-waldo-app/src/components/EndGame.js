@@ -11,6 +11,12 @@ const EndGame = (props) => {
                 <h2>You found all the characters</h2>
                 <h2>Your final time: {props.finalTime}</h2>
             </div>
+            <div className='end-game-form'>
+                <form>
+                    <label htmlFor='name'>Enter your name:</label>
+                    <input type='text' id='name' />
+                </form>
+            </div>
             <div className='end-game-btns'>
                 <button className='btn btn-secondary' onClick={handlePlayAgain}>
                     Play Again
