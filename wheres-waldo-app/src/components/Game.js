@@ -54,7 +54,7 @@ const Game = (props) => {
     };
 
     return (
-        <div className='main-game'>
+        <div className={foundAll ? ' main-game hidden' : 'main-game'}>
             <div className='game-header'>
                 <h1>
                     Level {level} - {data[level - 1].name}
