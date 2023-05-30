@@ -8,6 +8,8 @@ const EndGame = (props) => {
         <div className={props.foundAll ? 'end-game show' : 'end-game'}>
             <div className='message'>
                 <h1>Congratulations, you have won the game</h1>
+                <h2>You found all the characters</h2>
+                <h2>Your final time: {props.finalTime}</h2>
             </div>
             <div className='end-game-btns'>
                 <button className='btn btn-secondary' onClick={handlePlayAgain}>
