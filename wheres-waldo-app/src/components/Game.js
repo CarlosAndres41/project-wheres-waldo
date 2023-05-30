@@ -18,6 +18,10 @@ const Game = (props) => {
         height: 0,
     });
 
+    // Game states
+    const [found, setFound] = useState([false, false, false]);
+    const [foundAll, setFoundAll] = useState(false);
+
     const toggleDropdown = (e) => {
         setOpenDropdown(!openDropdown);
         setDropdownPosition({
@@ -73,6 +77,10 @@ const Game = (props) => {
                     coordinates={data[level - 1].coordinates}
                     openDropdown={openDropdown}
                     setOpenDropdown={setOpenDropdown}
+                    found={found}
+                    setFound={setFound}
+                    foundAll={foundAll}
+                    setFoundAll={setFoundAll}
                 />
             )}
             <div className='game-btn-container'>
