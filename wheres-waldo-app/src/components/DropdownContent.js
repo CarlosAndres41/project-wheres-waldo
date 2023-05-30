@@ -33,7 +33,9 @@ const DropdownContent = (props) => {
         );
 
         if (distance <= radius) {
-            console.log('Whithin radius');
+            const foundCopy = [...found];
+            foundCopy[index] = true;
+            setFound(foundCopy);
         } else {
             handleShake();
         }
