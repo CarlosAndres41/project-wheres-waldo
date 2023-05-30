@@ -203,3 +203,12 @@
     animation: shake 0.4s ease-in-out infinite;
 }
 /* Shake div End */
+
+/* End Game div Start */
+.end-game {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* End Game div End */
