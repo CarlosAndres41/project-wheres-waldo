@@ -95,6 +95,10 @@
 /* level Cards End */
 
 /* Game Start */
+.main-game {
+    position: relative;
+}
+
 .game-image {
     max-width: 90%;
     height: auto;
