@@ -113,6 +113,10 @@
     padding: 1rem;
     color: white;
     background-color: black;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .game-btn-container {
