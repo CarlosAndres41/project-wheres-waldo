@@ -71,6 +71,7 @@ const Game = (props) => {
                     names={data[level - 1].characterNames}
                     clickCoordinates={fixedCoordinates}
                     coordinates={data[level - 1].coordinates}
+                    toggleDropdown={toggleDropdown}
                 />
             )}
             <div className='game-btn-container'>
