@@ -64,6 +64,14 @@ const Game = (props) => {
         return () => clearInterval(interval);
     }, []);
 
+    const formatTime = (time) => {
+        const minutes = Math.floor(time / 60)
+            .toString()
+            .padStart(2, '0');
+        const seconds = (time % 60).toString().padStart(2, '0');
+        return `${minutes}:${seconds}`;
+    };
+
     return (
         <>
             <div className={foundAll ? ' main-game hidden' : 'main-game'}>
