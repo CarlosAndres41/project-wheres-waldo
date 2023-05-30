@@ -119,6 +119,11 @@
     padding: 1rem;
     text-align: center;
 }
+
+.main-game.hidden {
+    filter: blur(3px); /* Adjust the blur amount as needed */
+    pointer-events: none;
+}
 /* Game End */
 
 /* Dropdown content Start */
@@ -210,9 +215,15 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.6s ease;
 
     background-color: white;
     padding: 1rem;
     border-radius: 10px;
+}
+
+.end-game.show {
+    opacity: 1;
 }
 /* End Game div End */
