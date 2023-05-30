@@ -89,7 +89,9 @@ const Game = (props) => {
                     Return to Select Level
                 </button>
             </div>
-            {foundAll && <EndGame returnToSelect={returnToSelect} />}
+            {foundAll && (
+                <EndGame returnToSelect={returnToSelect} foundAll={foundAll} />
+            )}
         </div>
     );
 };
