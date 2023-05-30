@@ -16,6 +16,7 @@ const DropdownContent = (props) => {
     useEffect(() => {
         if (found.every((item) => item === true)) {
             setFoundAll(true);
+            console.log('found all');
         }
     }, [found]);
 
@@ -54,7 +55,7 @@ const DropdownContent = (props) => {
         >
             {images.map((image, index) => (
                 <div
-                    className='dropdown-item'
+                    className={found[index] ? 'found' : 'dropdown-item'}
                     key={index}
                     onClick={() => handleClick(index)}
                 >
