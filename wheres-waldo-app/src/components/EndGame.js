@@ -26,11 +26,8 @@ const EndGame = (props) => {
                     name: props.userName,
                     time: props.finalTime,
                 }),
-                // scores: arrayUnion(`{
-                //     name: ${props.userName},
-                //     time: ${props.finalTime},
-                // }`),
             });
+            setShowSaveScore(false);
         } catch (error) {
             console.log(error.message);
         }
@@ -52,12 +49,14 @@ const EndGame = (props) => {
                         placeholder={props.userName}
                         onChange={handleInputChange}
                     />
-                    <button
-                        className='btn btn-secondary save-score'
-                        onClick={handleSaveScore}
-                    >
-                        Save Score
-                    </button>
+                    {showSaveScore && (
+                        <button
+                            className='btn btn-secondary save-score'
+                            onClick={handleSaveScore}
+                        >
+                            Save Score
+                        </button>
+                    )}
                 </form>
             </div>
             <div className='end-game-btns'>
