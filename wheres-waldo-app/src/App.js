@@ -43,6 +43,7 @@ querySnapshot.forEach((doc) => {
         characters: doc.data().Characters,
         characterNames: doc.data().CharacterNames,
         coordinates: doc.data().Coordinates,
+        scores: doc.data().scores,
     });
 });
 
