@@ -1,5 +1,7 @@
 const Scoreboard = (props) => {
-    const scores = props.scores;
+    const allScores = props.scores;
+    const scores = allScores.slice(0, 5);
+
     return (
         <div className='scoreboard'>
             <div className='scoreboard-header'>
