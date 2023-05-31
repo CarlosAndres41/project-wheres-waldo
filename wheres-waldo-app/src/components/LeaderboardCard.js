@@ -2,24 +2,11 @@ const LeaderboardCard = (props) => {
     const { name, author, source, image, characters, index, startGame } = props;
     return (
         <div className='level-card'>
-            <div className='card-header'>
+            <div className='card-header leaderboard-header'>
                 <h2>Level {index + 1}</h2>
+                <h4>{name}</h4>
             </div>
-            <div className='card-description'>
-                <div className='card-name'>
-                    <h4>{name}</h4>
-                </div>
-                <div className='card-chars'>
-                    {characters.map((char, index) => (
-                        <img
-                            key={index}
-                            src={char}
-                            alt='character'
-                            className='character-img'
-                        ></img>
-                    ))}
-                </div>
-            </div>
+
             <div>
                 <img src={image} alt={name} className='card-img'></img>
             </div>
@@ -39,7 +26,7 @@ const LeaderboardCard = (props) => {
                     onClick={() => startGame(index)}
                     className='btn btn-secondary'
                 >
-                    Play
+                    Play this level
                 </button>
             </div>
         </div>
