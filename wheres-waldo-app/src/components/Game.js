@@ -35,7 +35,7 @@ const Game = (props) => {
 
         const { clientX, clientY } = e;
         const dropdownWidth = 300;
-        const dropdownHeight = 300;
+        const dropdownHeight = 200;
         const viewportWidth = window.innerWidth;
         const viewportHeight = window.innerHeight;
 
