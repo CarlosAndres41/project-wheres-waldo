@@ -19,10 +19,14 @@ const EndGame = (props) => {
         const levelRef = doc(props.database, 'Images', props.id);
         try {
             await updateDoc(levelRef, {
-                scores: arrayUnion(`{
-                    name: ${props.userName},
-                    time: ${props.finalTime},
-                }`),
+                scores: arrayUnion({
+                    name: props.userName,
+                    time: props.finalTime,
+                }),
+                // scores: arrayUnion(`{
+                //     name: ${props.userName},
+                //     time: ${props.finalTime},
+                // }`),
             });
         } catch (error) {
             console.log(error.message);
