@@ -3,6 +3,7 @@ import { useState } from 'react';
 
 const EndGame = (props) => {
     const [showSaveScore, setShowSaveScore] = useState(true);
+    const [saveError, setSaveError] = useState(false);
 
     const handlePlayAgain = () => {
         props.setFound([false, false, false]);
