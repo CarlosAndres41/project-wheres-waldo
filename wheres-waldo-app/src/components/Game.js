@@ -139,6 +139,8 @@ const Game = (props) => {
                     finalTime={formatTime(timer)}
                     userName={userName}
                     setUserName={setUserName}
+                    setTimer={setTimer}
+                    setIsRunning={setIsRunning}
                 />
             )}
         </>
