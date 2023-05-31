@@ -1,5 +1,5 @@
 const LeaderboardCard = (props) => {
-    const { name, author, source, image, index, startGame } = props;
+    const { name, author, source, image, index, startGame, scores } = props;
     return (
         <div className='level-card'>
             <div className='card-header leaderboard-header'>
@@ -24,6 +24,10 @@ const LeaderboardCard = (props) => {
                         Source
                     </a>
                 </p>
+            </div>
+            <div className='leaderboard-scores'>
+                <h3>Top Scores:</h3>
+                {scores.length === 0 && <p>No scores yet</p>}
             </div>
             <div className='card-btn'>
                 <button
