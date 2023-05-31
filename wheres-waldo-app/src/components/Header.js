@@ -1,7 +1,7 @@
 import Icon from '@mdi/react';
 import { mdiCursorDefaultClickOutline } from '@mdi/js';
 
-const Header = () => {
+const Header = (props) => {
     return (
         <header className='app-header'>
             <div className='app-name-logo'>
@@ -18,7 +18,12 @@ const Header = () => {
                 <h1>Wimmelbilder App</h1>
             </div>
             <div className='header-buttons'>
-                <button className='btn btn-primary'>Leaderboard</button>
+                <button
+                    className='btn btn-primary'
+                    onClick={props.displayLeaderboard}
+                >
+                    Leaderboard
+                </button>
             </div>
         </header>
     );
