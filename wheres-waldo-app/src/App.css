@@ -308,4 +308,20 @@ input:focus {
     top: -80px; /* Adjust the top offset to show the desired part */
     left: -200px; /* Adjust the left offset to show the desired part */
 }
+
+.scoreboard {
+    padding: 1rem;
+}
+.scoreboard-header,
+.scoreboard-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.no-scores {
+    text-align: center;
+    padding: 2rem;
+    color: rgb(0, 0, 0, 0.5);
+}
+
 /* Leaderboard End */
