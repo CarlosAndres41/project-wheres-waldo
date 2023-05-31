@@ -65,6 +65,12 @@ function App() {
         setShowLeaderboard(false);
     };
 
+    const displayLeaderboard = () => {
+        setShowLeaderboard(true);
+        setShowLevels(false);
+        setGameStart(false);
+    };
+
     return (
         <div className='App'>
             <Header />
