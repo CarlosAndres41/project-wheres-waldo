@@ -276,4 +276,8 @@ input:focus {
     gap: 1rem;
 }
 
+.saved-score {
+    margin-top: 5px;
+    color: green;
+}
 /* End Game div End */
