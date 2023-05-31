@@ -13,15 +13,20 @@ const EndGame = (props) => {
         props.setUserName(e.target.value);
     };
 
-    async function handleSaveScore() {
-        const levelRef = doc(props.db, 'Images', props.id);
-
-        await updateDoc(levelRef, {
-            scores: arrayUnion({
-                name: props.userName,
-                time: props.finalTime,
-            }),
-        });
+    async function handleSaveScore(e) {
+        e.preventDefault();
+        // console.log(props.id);
+        const levelRef = doc(props.database, 'Images', props.id);
+        try {
+            await updateDoc(levelRef, {
+                scores: arrayUnion(`{
+                    name: ${props.userName},
+                    time: ${props.finalTime},
+                }`),
+            });
+        } catch (error) {
+            console.log(error.message);
+        }
     }
 
     return (
