@@ -73,7 +73,7 @@ function App() {
 
     return (
         <div className='App'>
-            <Header />
+            <Header displayLeaderboard={displayLeaderboard} />
             {showLevels && (
                 <SelectLevel>
                     {data.map((item, index) => (
