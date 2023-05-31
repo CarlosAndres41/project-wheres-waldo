@@ -1,3 +1,5 @@
+import Scoreboard from './Scoreboard';
+
 const LeaderboardCard = (props) => {
     const { name, author, source, image, index, startGame, scores } = props;
 
@@ -48,6 +50,7 @@ const LeaderboardCard = (props) => {
             <div className='leaderboard-scores'>
                 <h3>Top Scores:</h3>
                 {scores.length === 0 && <p>No scores yet</p>}
+                {scores.length > 0 && <Scoreboard scores={scores} />}
             </div>
             <div className='card-btn'>
                 <button
