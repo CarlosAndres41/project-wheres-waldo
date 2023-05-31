@@ -1,3 +1,5 @@
+import { doc, updateDoc, arrayUnion, arrayRemove } from 'firebase/firestore';
+
 const EndGame = (props) => {
     const handlePlayAgain = () => {
         props.setFound([false, false, false]);
@@ -8,6 +10,7 @@ const EndGame = (props) => {
         console.log(props.userName);
         console.log(props.finalTime);
     };
+
     const handleInputChange = (e) => {
         props.setUserName(e.target.value);
     };
