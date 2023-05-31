@@ -23,6 +23,8 @@ const Game = (props) => {
     const [found, setFound] = useState([false, false, false]);
     const [foundAll, setFoundAll] = useState(false);
 
+    const [userName, setUserName] = useState('Player');
+
     // Timer
     const [timer, setTimer] = useState(0);
     const [isRunning, setIsRunning] = useState(true);
