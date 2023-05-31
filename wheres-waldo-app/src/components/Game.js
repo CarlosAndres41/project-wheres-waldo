@@ -133,6 +133,8 @@ const Game = (props) => {
                     setFound={setFound}
                     setFoundAll={setFoundAll}
                     finalTime={formatTime(timer)}
+                    userName={userName}
+                    setUserName={setUserName}
                 />
             )}
         </>
