@@ -4,6 +4,10 @@ const EndGame = (props) => {
         props.setFoundAll(false);
     };
 
+    const handleInputChange = (e) => {
+        props.setUserName(e.target.value);
+    };
+
     return (
         <div className={props.foundAll ? 'end-game show' : 'end-game'}>
             <div className='message'>
@@ -14,7 +18,12 @@ const EndGame = (props) => {
             <div className='end-game-form'>
                 <form>
                     <label htmlFor='name'>Enter your name:</label>
-                    <input type='text' id='name' />
+                    <input
+                        type='text'
+                        id='name'
+                        placeholder={props.userName}
+                        onChange={handleInputChange}
+                    />
                 </form>
             </div>
             <div className='end-game-btns'>
