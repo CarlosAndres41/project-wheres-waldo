@@ -99,7 +99,7 @@ function App() {
                     db={db}
                 />
             )}
-            {showLeaderboard && <Leaderboard />}
+            {showLeaderboard && <Leaderboard data={data} />}
         </div>
     );
 }
