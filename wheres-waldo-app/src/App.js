@@ -55,12 +55,14 @@ function App() {
     const startGame = (index) => {
         setGameStart(true);
         setShowLevels(false);
+        setShowLeaderboard(false);
         setLevel(index + 1);
     };
 
     const returnToSelect = () => {
         setGameStart(false);
         setShowLevels(true);
+        setShowLeaderboard(false);
     };
 
     return (
