@@ -286,3 +286,12 @@ input:focus {
     color: red;
 }
 /* End Game div End */
+
+/* Leaderboard Start */
+.leaderboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+/* Leaderboard End */
