@@ -47,21 +47,24 @@ querySnapshot.forEach((doc) => {
 
 function App() {
     const [gameStart, setGameStart] = useState(false);
+    const [showLevels, setShowLevels] = useState(true);
     const [level, setLevel] = useState(0);
 
     const startGame = (index) => {
         setGameStart(true);
+        setShowLevels(false);
         setLevel(index + 1);
     };
 
     const returnToSelect = () => {
         setGameStart(false);
+        setShowLevels(true);
     };
 
     return (
         <div className='App'>
             <Header />
-            {!gameStart && (
+            {showLevels && (
                 <SelectLevel>
                     {data.map((item, index) => (
                         <LevelCard
