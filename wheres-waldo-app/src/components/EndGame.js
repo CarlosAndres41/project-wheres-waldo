@@ -1,4 +1,4 @@
-import { doc, updateDoc, arrayUnion, arrayRemove } from 'firebase/firestore';
+import { doc, updateDoc, arrayUnion } from 'firebase/firestore';
 
 const EndGame = (props) => {
     const handlePlayAgain = () => {
@@ -7,13 +7,22 @@ const EndGame = (props) => {
         props.setTimer(0);
         // props.setUserName('');
         props.setIsRunning(true);
-        console.log(props.userName);
-        console.log(props.finalTime);
     };
 
     const handleInputChange = (e) => {
         props.setUserName(e.target.value);
     };
+
+    async function handleSaveScore() {
+        const levelRef = doc(props.db, 'Images', props.id);
+
+        await updateDoc(levelRef, {
+            scores: arrayUnion({
+                name: props.userName,
+                time: props.finalTime,
+            }),
+        });
+    }
 
     return (
         <div className={props.foundAll ? 'end-game show' : 'end-game'}>
