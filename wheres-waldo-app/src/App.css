@@ -294,4 +294,17 @@ input:focus {
     justify-content: space-between;
     margin-bottom: 5px;
 }
+
+.img-container {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.leaderboard-card-img {
+    position: absolute;
+    top: -80px; /* Adjust the top offset to show the desired part */
+    left: -200px; /* Adjust the left offset to show the desired part */
+}
 /* Leaderboard End */
