@@ -68,13 +68,17 @@ const Game = (props) => {
                 setTimer((prevTimer) => prevTimer + 1);
             }, 1000);
         }
+
+        if (foundAll) {
+            setIsRunning(false);
+        }
         return () => clearInterval(interval);
-    }, [isRunning]);
+    }, [isRunning, foundAll]);
 
     // Use effect for foundAll
-    useEffect(() => {
-        setIsRunning(false);
-    }, [foundAll]);
+    // useEffect(() => {
+    //     setIsRunning(false);
+    // }, [foundAll]);
 
     const formatTime = (time) => {
         const minutes = Math.floor(time / 60)
