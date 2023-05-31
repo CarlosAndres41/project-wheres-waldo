@@ -10,6 +10,7 @@ const EndGame = (props) => {
         props.setTimer(0);
         // props.setUserName('');
         props.setIsRunning(true);
+        setShowSaveScore(true);
     };
 
     const handleInputChange = (e) => {
