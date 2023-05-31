@@ -49,7 +49,9 @@ const LeaderboardCard = (props) => {
             </div>
             <div className='leaderboard-scores'>
                 <h3>Top Scores:</h3>
-                {scores.length === 0 && <p>No scores yet</p>}
+                {scores.length === 0 && (
+                    <p className='no-scores'>No scores yet</p>
+                )}
                 {scores.length > 0 && <Scoreboard scores={scores} />}
             </div>
             <div className='card-btn'>
