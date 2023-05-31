@@ -12,6 +12,7 @@ import Header from './components/Header';
 import SelectLevel from './components/SelectLevel';
 import LevelCard from './components/LevelCard';
 import Game from './components/Game';
+import Leaderboard from './components/Leaderboard';
 
 import { useState } from 'react';
 
@@ -48,6 +49,7 @@ querySnapshot.forEach((doc) => {
 function App() {
     const [gameStart, setGameStart] = useState(false);
     const [showLevels, setShowLevels] = useState(true);
+    const [showLeaderboard, setShowLeaderboard] = useState(false);
     const [level, setLevel] = useState(0);
 
     const startGame = (index) => {
