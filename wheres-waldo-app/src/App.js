@@ -82,6 +82,7 @@ function App() {
                     returnToSelect={returnToSelect}
                     level={level}
                     data={data}
+                    db={db}
                 />
             )}
         </div>
