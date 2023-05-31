@@ -1,6 +1,9 @@
 import { doc, updateDoc, arrayUnion } from 'firebase/firestore';
+import { useState } from 'react';
 
 const EndGame = (props) => {
+    const [showSaveScore, setShowSaveScore] = useState(true);
+
     const handlePlayAgain = () => {
         props.setFound([false, false, false]);
         props.setFoundAll(false);
