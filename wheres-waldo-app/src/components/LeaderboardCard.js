@@ -1,5 +1,5 @@
 const LeaderboardCard = (props) => {
-    const { name, author, source, image, characters, index, startGame } = props;
+    const { name, author, source, image, index, startGame } = props;
     return (
         <div className='level-card'>
             <div className='card-header leaderboard-header'>
@@ -7,7 +7,7 @@ const LeaderboardCard = (props) => {
                 <h4>{name}</h4>
             </div>
 
-            <div>
+            <div className='img-container'>
                 <img
                     src={image}
                     alt={name}
