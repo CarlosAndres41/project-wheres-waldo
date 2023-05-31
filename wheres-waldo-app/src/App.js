@@ -109,7 +109,7 @@ function App() {
                             author={item.author}
                             source={item.source}
                             image={item.image}
-                            characters={item.characters}
+                            scores={item.scores}
                             index={index}
                             startGame={startGame}
                         />
