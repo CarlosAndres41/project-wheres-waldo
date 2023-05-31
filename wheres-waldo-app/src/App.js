@@ -90,6 +90,7 @@ function App() {
                     db={db}
                 />
             )}
+            {showLeaderboard && <Leaderboard />}
         </div>
     );
 }
