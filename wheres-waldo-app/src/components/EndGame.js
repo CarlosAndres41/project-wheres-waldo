@@ -5,8 +5,9 @@ const EndGame = (props) => {
         props.setTimer(0);
         // props.setUserName('');
         props.setIsRunning(true);
+        console.log(props.userName);
+        console.log(props.finalTime);
     };
-
     const handleInputChange = (e) => {
         props.setUserName(e.target.value);
     };
@@ -27,6 +28,12 @@ const EndGame = (props) => {
                         placeholder={props.userName}
                         onChange={handleInputChange}
                     />
+                    <button
+                        className='btn btn-secondary'
+                        onClick={props.saveScore}
+                    >
+                        Save Score
+                    </button>
                 </form>
             </div>
             <div className='end-game-btns'>
