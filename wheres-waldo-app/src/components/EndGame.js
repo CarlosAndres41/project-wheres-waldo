@@ -21,13 +21,13 @@ const EndGame = (props) => {
         // console.log(props.id);
         const levelRef = doc(props.database, 'Images', props.id);
         try {
+            setShowSaveScore(false);
             await updateDoc(levelRef, {
                 scores: arrayUnion({
                     name: props.userName,
                     time: props.finalTime,
                 }),
             });
-            setShowSaveScore(false);
         } catch (error) {
             console.log(error.message);
         }
@@ -56,6 +56,11 @@ const EndGame = (props) => {
                         >
                             Save Score
                         </button>
+                    )}
+                    {!showSaveScore && (
+                        <h4 className='saved-score'>
+                            Your score has been saved!
+                        </h4>
                     )}
                 </form>
             </div>
