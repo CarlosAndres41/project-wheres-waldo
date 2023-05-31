@@ -42,7 +42,7 @@ const EndGame = (props) => {
                     />
                     <button
                         className='btn btn-secondary save-score'
-                        onClick={props.saveScore}
+                        onClick={handleSaveScore}
                     >
                         Save Score
                     </button>
