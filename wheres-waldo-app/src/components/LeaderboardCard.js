@@ -8,7 +8,11 @@ const LeaderboardCard = (props) => {
             </div>
 
             <div>
-                <img src={image} alt={name} className='card-img'></img>
+                <img
+                    src={image}
+                    alt={name}
+                    className='leaderboard-card-img'
+                ></img>
             </div>
 
             <div className='card-footer'>
