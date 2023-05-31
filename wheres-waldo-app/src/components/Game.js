@@ -7,6 +7,7 @@ const Game = (props) => {
     const returnToSelect = props.returnToSelect;
     const level = props.level;
     const data = props.data;
+    const database = props.db;
 
     const [openDropdown, setOpenDropdown] = useState(false);
     const [dropddownPosition, setDropdownPosition] = useState({
@@ -141,6 +142,8 @@ const Game = (props) => {
                     setUserName={setUserName}
                     setTimer={setTimer}
                     setIsRunning={setIsRunning}
+                    database={database}
+                    id={data[level - 1].id}
                 />
             )}
         </>
