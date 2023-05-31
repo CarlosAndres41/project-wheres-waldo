@@ -2,6 +2,9 @@ const EndGame = (props) => {
     const handlePlayAgain = () => {
         props.setFound([false, false, false]);
         props.setFoundAll(false);
+        props.setTimer(0);
+        // props.setUserName('');
+        props.setIsRunning(true);
     };
 
     const handleInputChange = (e) => {
