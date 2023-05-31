@@ -32,9 +32,29 @@ const Game = (props) => {
 
     const toggleDropdown = (e) => {
         setOpenDropdown(!openDropdown);
+
+        const { clientX, clientY } = e;
+        const dropdownWidth = 300;
+        const dropdownHeight = 300;
+        const viewportWidth = window.innerWidth;
+        const viewportHeight = window.innerHeight;
+
+        // Calculate the new position of the dropdown
+        let left = clientX;
+        let top = clientY;
+
+        // Adjust the position to keep the dropdown within the viewport
+        if (left + dropdownWidth > viewportWidth) {
+            left = viewportWidth - dropdownWidth;
+        }
+
+        if (top + dropdownHeight > viewportHeight) {
+            top = viewportHeight - dropdownHeight;
+        }
+
         setDropdownPosition({
-            x: e.clientX,
-            y: e.clientY,
+            x: left,
+            y: top,
         });
 
         const imageRect = e.target.getBoundingClientRect();
