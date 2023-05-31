@@ -101,7 +101,7 @@ function App() {
                 />
             )}
             {showLeaderboard && (
-                <Leaderboard>
+                <Leaderboard returnToSelect={returnToSelect}>
                     {data.map((item, index) => (
                         <LeaderboardCard
                             key={item.id}
