@@ -12,6 +12,7 @@ const EndGame = (props) => {
         // props.setUserName('');
         props.setIsRunning(true);
         setShowSaveScore(true);
+        setSaveError(false);
     };
 
     const handleInputChange = (e) => {
@@ -31,7 +32,7 @@ const EndGame = (props) => {
                 }),
             });
         } catch (error) {
-            console.log(error.message);
+            setSaveError(true);
         }
     }
 
@@ -62,6 +63,12 @@ const EndGame = (props) => {
                     {!showSaveScore && (
                         <h4 className='saved-score'>
                             Your score has been saved!
+                        </h4>
+                    )}
+                    {saveError && (
+                        <h4 className='saved-error'>
+                            There was an error saving your score. Please try
+                            again.
                         </h4>
                     )}
                 </form>
