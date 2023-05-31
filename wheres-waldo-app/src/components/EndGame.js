@@ -29,7 +29,7 @@ const EndGame = (props) => {
                         onChange={handleInputChange}
                     />
                     <button
-                        className='btn btn-secondary'
+                        className='btn btn-secondary save-score'
                         onClick={props.saveScore}
                     >
                         Save Score
