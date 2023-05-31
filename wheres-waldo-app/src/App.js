@@ -13,6 +13,7 @@ import SelectLevel from './components/SelectLevel';
 import LevelCard from './components/LevelCard';
 import Game from './components/Game';
 import Leaderboard from './components/Leaderboard';
+import LeaderboardCard from './components/LeaderboardCard';
 
 import { useState } from 'react';
 
@@ -99,7 +100,22 @@ function App() {
                     db={db}
                 />
             )}
-            {showLeaderboard && <Leaderboard data={data} />}
+            {showLeaderboard && (
+                <Leaderboard>
+                    {data.map((item, index) => (
+                        <LeaderboardCard
+                            key={item.id}
+                            name={item.name}
+                            author={item.author}
+                            source={item.source}
+                            image={item.image}
+                            characters={item.characters}
+                            index={index}
+                            startGame={startGame}
+                        />
+                    ))}
+                </Leaderboard>
+            )}
         </div>
     );
 }
